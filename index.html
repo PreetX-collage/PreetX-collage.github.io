@@ -15,6 +15,8 @@
       html,
       body {
         min-height: 100%;
+        background-color: lightblue;
+        background-image: repeating-linear-gradient(darkviolet, blue, lightblue);
       }
       body,
       div,
@@ -24,7 +26,7 @@
         padding: 0;
         margin: 0;
         outline: none;
-        font-family: Roboto, Arial, sans-serif;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         font-size: 14px;
         color: #666;
         line-height: 22px;
@@ -33,10 +35,22 @@
         color: red;
       }
       h1 {
-        font-weight: 400;
+        font-weight: 500;
       }
       h4 {
         margin: 15px 0 4px;
+      }
+      .element, .Heading {
+        margin-bottom: 0.5%;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      .Heading {
+        background-color: white;
+        border-top: 5px solid blue;
+      }
+      .element {
+        background-color: white;
       }
       .testbox {
         display: flex;
@@ -46,10 +60,13 @@
         padding: 3px;
       }
       form {
-        width: 100%;
-        padding: 20px;
-        background: #fff;
-        box-shadow: 0 2px 5px #ccc;
+        width: 60%;
+        margin-top: 3%;
+        /* padding: 20px; */
+        /* background: darkviolet; */
+        /* box-shadow: 0 2px 5px #ccc; */
+        border-radius: 10px;
+        margin-bottom: 10%;
       }
       input {
         width: calc(100% - 10px);
@@ -126,35 +143,33 @@
           </p>
         </div>
         <hr />
-        <div class="Email">
-          <label for="Email-address"><h2>Email address <span class="required">*</span></h2></label>
-          <input class="email" type="text" name="Email" required />
+        <div class="element">
+          <div class="Email">
+            <label for="Email-address"
+              ><h3>Email address <span class="required">*</span></h3></label
+            >
+            <input class="email" type="text" name="Email" required />
+          </div>
         </div>
-        <div class="test1">
+        <div class="element">
           <div class="question">
-            <h2>First pair <span class="required">*</span></h2>
+            <h3>First pair <span class="required">*</span></h3>
             <table>
               <tr>
                 <th>
                   <h4>File1</h4>
-                </th>
-                <th>
-                  <h4>File2</h4>
-                </th>
-              </tr>
-              <tr>
-                <td>
                   <audio controls>
                     <source src="audio_files/anonymized_female.wav" />
                     Your browser does not support audio.
                   </audio>
-                </td>
-                <td>
+                </th>
+                <th>
+                  <h4>File2</h4>
                   <audio controls>
                     <source src="audio_files/anonymized_male.wav" />
                     Your browser does not support audio.
                   </audio>
-                </td>
+                </th>
               </tr>
             </table>
           </div>
@@ -233,32 +248,25 @@
             </table>
           </div>
         </div>
-        <hr />
-        <div class="test2">
+        <div class="element">
           <div class="question">
-            <h2>Second pair <span class="required">*</span></h2>
+            <h3>Second pair <span class="required">*</span></h3>
             <table>
               <tr>
                 <th>
                   <h4>File1</h4>
-                </th>
-                <th>
-                  <h4>File2</h4>
-                </th>
-              </tr>
-              <tr>
-                <td>
                   <audio controls>
                     <source src="audio_files/original_female.wav" />
                     Your browser does not support audio.
                   </audio>
-                </td>
-                <td>
+                </th>
+                <th>
+                  <h4>File2</h4>
                   <audio controls>
                     <source src="audio_files/original_male.wav" />
                     Your browser does not support audio.
                   </audio>
-                </td>
+                </th>
               </tr>
             </table>
           </div>
@@ -338,7 +346,7 @@
           </div>
         </div>
         <div class="btn-block">
-          <button type="submit">Send Feedback</button>
+          <button type="submit">Submit Response</button>
         </div>
       </form>
     </div>
