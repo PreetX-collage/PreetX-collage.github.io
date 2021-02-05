@@ -16,7 +16,6 @@
       body {
         min-height: 100%;
         background-color: lightblue;
-        background-image: repeating-linear-gradient(darkviolet, blue, lightblue);
       }
       body,
       div,
@@ -26,7 +25,7 @@
         padding: 0;
         margin: 0;
         outline: none;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
         font-size: 14px;
         color: #666;
         line-height: 22px;
@@ -40,18 +39,17 @@
       h4 {
         margin: 15px 0 4px;
       }
-      .element, .Heading {
+      .element,
+      .Heading {
         margin-bottom: 0.5%;
         border-radius: 10px;
         padding: 20px;
+        background-color: white;
       }
       .Heading {
-        background-color: white;
         border-top: 5px solid blue;
       }
-      .element {
-        background-color: white;
-      }
+
       .testbox {
         display: flex;
         justify-content: center;
@@ -60,11 +58,8 @@
         padding: 3px;
       }
       form {
-        width: 60%;
+        width: 80%;
         margin-top: 3%;
-        /* padding: 20px; */
-        /* background: darkviolet; */
-        /* box-shadow: 0 2px 5px #ccc; */
         border-radius: 10px;
         margin-bottom: 10%;
       }
@@ -75,7 +70,7 @@
         border-radius: 3px;
         vertical-align: middle;
       }
-      .email {
+      .name {
         display: block;
         width: 45%;
       }
@@ -88,16 +83,30 @@
       td {
         width: 15%;
         padding: 15px 0;
-        border-bottom: 1px solid #ccc;
+        /* border-bottom: 1px solid #ccc; */
         text-align: center;
         vertical-align: unset;
         line-height: 18px;
         font-weight: 400;
         word-break: break-all;
       }
+      table {
+        border-collapse: collapse;
+      }
+      th {
+        border-bottom: 1px solid #ccc;
+      }
       .first-col {
-        width: 16%;
+        width: 8%;
         text-align: left;
+        font-weight: 600;
+      }
+      .second-col {
+        width: 10%;
+        text-align: left;
+      }
+      .response, .spk-dis {
+        border-bottom: 1px solid #ccc;
       }
       table {
         width: 100%;
@@ -139,210 +148,2833 @@
           <h1>Subjective Evaluation Form</h1>
           <p>
             Please take a few minutes to give this subjective test for our
-            research.
+            research. Rate all the fields without any bias if possible. Please do not 
+            spam with random submissions since it can affect our overall reaserch. <br />
+            <br />
+            <strong>Naturlness:</strong> Describes how natural the speech
+            sounds. <br />
+            <strong>Intelligibility:</strong> Intelligibility is a measure of
+            how comprehensible speech is. <br />
+            <strong>Speaker Dissimilarity:</strong> For speaker dissimilarity, 5 means utterences are spoken by 
+            different(dissimilar) speakers while 1 
+            means same speaker has spoken both the utterences.
           </p>
         </div>
         <hr />
         <div class="element">
-          <div class="Email">
-            <label for="Email-address"
-              ><h3>Email address <span class="required">*</span></h3></label
-            >
-            <input class="email" type="text" name="Email" required />
+          <div class="name">
+            <label for="name">
+              <h2>Full Name<span class="required">*</span></h2>
+            </label>
+            <input class="name" type="text" name="Full Name" required />
           </div>
         </div>
         <div class="element">
-          <div class="question">
-            <h3>First pair <span class="required">*</span></h3>
-            <table>
-              <tr>
-                <th>
-                  <h4>File1</h4>
-                  <audio controls>
-                    <source src="audio_files/anonymized_female.wav" />
-                    Your browser does not support audio.
-                  </audio>
-                </th>
-                <th>
-                  <h4>File2</h4>
-                  <audio controls>
-                    <source src="audio_files/anonymized_male.wav" />
-                    Your browser does not support audio.
-                  </audio>
-                </th>
-              </tr>
-            </table>
-          </div>
-          <div class="responses">
-            <table>
-              <tr>
-                <th class="first-col"></th>
-                <th>Very Good</th>
-                <th>Good</th>
-                <th>Fair</th>
-                <th>Poor</th>
-                <th>Very Poor</th>
-              </tr>
-              <div class="response1">
+          <div class="Experiment">
+            <p><h2>Experiment 1<span class="required">*</span></h2></p>
+            <hr>
+            <div class="test">
+              <h3>First pair </h3>
+              <table>
                 <tr>
-                  <td class="first-col">Naturlness</td>
-                  <td>
-                    <input
-                      type="radio"
-                      value="1"
-                      name="test1.naturlness"
-                      required
-                    />
-                  </td>
-                  <td>
-                    <input type="radio" value="2" name="test1.naturlness" />
-                  </td>
-                  <td>
-                    <input type="radio" value="3" name="test1.naturlness" />
-                  </td>
-                  <td>
-                    <input type="radio" value="4" name="test1.naturlness" />
-                  </td>
-                  <td>
-                    <input type="radio" value="5" name="test1.naturlness" />
-                  </td>
+                  <th>
+                    <h4>File 1</h4>
+                    <audio controls>
+                      <source src="subjective_test\cycleGAN\1607-149245-0034.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 2</h4>
+                    <audio controls>
+                      <source src="subjective_test\cycleGAN\1607-149245-0034_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
                 </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 1</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex1.f1.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex1.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex1.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex1.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex1.f1.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex1.f1.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex1.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex1.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex1.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex1.f1.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 2</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex1.f2.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex1.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex1.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex1.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex1.f2.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex1.f2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex1.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex1.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex1.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex1.f2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex1.f1-2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex1.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex1.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex1.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex1.f1-2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
               </div>
-              <div class="response2">
+            </div>
+            <hr>
+            <div class="test">
+              <h3>Second pair</h3>
+              <table>
                 <tr>
-                  <td class="first-col">Noise</td>
-                  <td>
-                    <input type="radio" value="1" name="test1.noise" required />
-                  </td>
-                  <td><input type="radio" value="2" name="test1.noise" /></td>
-                  <td><input type="radio" value="3" name="test1.noise" /></td>
-                  <td><input type="radio" value="4" name="test1.noise" /></td>
-                  <td><input type="radio" value="5" name="test1.noise" /></td>
+                  <th>
+                    <h4>File 3</h4>
+                    <audio controls>
+                      <source src="subjective_test\cycleGAN\2004-147981-0023.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 4</h4>
+                    <audio controls>
+                      <source src="subjective_test\cycleGAN\2004-147981-0023_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
                 </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 3</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex1.f3.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex1.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex1.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex1.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex1.f3.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex1.f3.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex1.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex1.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex1.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex1.f3.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 4</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex1.f4.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex1.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex1.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex1.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex1.f4.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex1.f4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex1.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex1.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex1.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex1.f4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex1.f3-4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex1.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex1.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex1.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex1.f3-4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
               </div>
-              <div class="response3">
-                <tr>
-                  <td class="first-col">Distortion</td>
-                  <td>
-                    <input
-                      type="radio"
-                      value="1"
-                      name="test1.distortion"
-                      required
-                    />
-                  </td>
-                  <td>
-                    <input type="radio" value="2" name="test1.distortion" />
-                  </td>
-                  <td>
-                    <input type="radio" value="3" name="test1.distortion" />
-                  </td>
-                  <td>
-                    <input type="radio" value="4" name="test1.distortion" />
-                  </td>
-                  <td>
-                    <input type="radio" value="5" name="test1.distortion" />
-                  </td>
-                </tr>
-              </div>
-            </table>
+            </div>
           </div>
         </div>
         <div class="element">
-          <div class="question">
-            <h3>Second pair <span class="required">*</span></h3>
-            <table>
-              <tr>
-                <th>
-                  <h4>File1</h4>
-                  <audio controls>
-                    <source src="audio_files/original_female.wav" />
-                    Your browser does not support audio.
-                  </audio>
-                </th>
-                <th>
-                  <h4>File2</h4>
-                  <audio controls>
-                    <source src="audio_files/original_male.wav" />
-                    Your browser does not support audio.
-                  </audio>
-                </th>
-              </tr>
-            </table>
+          <div class="Experiment">
+            <p><h2>Experiment 2<span class="required">*</span></h2></p>
+            <hr>
+            <div class="test">
+              <h3>First pair </h3>
+              <table>
+                <tr>
+                  <th>
+                    <h4>File 1</h4>
+                    <audio controls>
+                      <source src="subjective_test\double_anon_cyclegan_tempo_0_8\1607-149245-0034.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 2</h4>
+                    <audio controls>
+                      <source src="subjective_test\double_anon_cyclegan_tempo_0_8\1607-149245-0034_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 1</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex2.f1.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex2.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex2.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex2.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex2.f1.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex2.f1.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex2.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex2.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex2.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex2.f1.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 2</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex2.f2.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex2.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex2.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex2.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex2.f2.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex2.f2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex2.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex2.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex2.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex2.f2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex2.f1-2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex2.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex2.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex2.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex2.f1-2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+              </div>
+            </div>
+            <hr>
+            <div class="test">
+              <h3>Second pair</h3>
+              <table>
+                <tr>
+                  <th>
+                    <h4>File 3</h4>
+                    <audio controls>
+                      <source src="subjective_test\double_anon_cyclegan_tempo_0_8\2004-147981-0023.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 4</h4>
+                    <audio controls>
+                      <source src="subjective_test\double_anon_cyclegan_tempo_0_8\2004-147981-0023_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 3</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex2.f3.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex2.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex2.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex2.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex2.f3.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex2.f3.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex2.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex2.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex2.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex2.f3.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 4</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex2.f4.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex2.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex2.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex2.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex2.f4.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex2.f4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex2.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex2.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex2.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex2.f4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex2.f3-4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex2.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex2.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex2.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex2.f3-4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+              </div>
+            </div>
           </div>
-          <div class="test2.responses">
-            <table>
-              <tr>
-                <th class="first-col"></th>
-                <th>Very Good</th>
-                <th>Good</th>
-                <th>Fair</th>
-                <th>Poor</th>
-                <th>Very Poor</th>
-              </tr>
-              <div class="test2.response1">
+        </div>
+        <div class="element">
+          <div class="Experiment">
+            <p><h2>Experiment 3<span class="required">*</span></h2></p>
+            <hr>
+            <div class="test">
+              <h3>First pair </h3>
+              <table>
                 <tr>
-                  <td class="first-col">Naturlness</td>
-                  <td>
-                    <input
-                      type="radio"
-                      value="1"
-                      name="test2.naturlness"
-                      required
-                    />
-                  </td>
-                  <td>
-                    <input type="radio" value="2" name="test2.naturlness" />
-                  </td>
-                  <td>
-                    <input type="radio" value="3" name="test2.naturlness" />
-                  </td>
-                  <td>
-                    <input type="radio" value="4" name="test2.naturlness" />
-                  </td>
-                  <td>
-                    <input type="radio" value="5" name="test2.naturlness" />
-                  </td>
+                  <th>
+                    <h4>File 1</h4>
+                    <audio controls>
+                      <source src="subjective_test\double_anon_speed_tempo_cross_cyclegan\1284-1181-0006.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 2</h4>
+                    <audio controls>
+                      <source src="subjective_test\double_anon_speed_tempo_cross_cyclegan\1284-1181-0006_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
                 </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 1</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex3.f1.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex3.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex3.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex3.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex3.f1.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex3.f1.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex3.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex3.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex3.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex3.f1.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 2</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex3.f2.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex3.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex3.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex3.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex3.f2.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex3.f2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex3.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex3.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex3.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex3.f2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex3.f1-2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex3.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex3.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex3.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex3.f1-2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
               </div>
-              <div class="test2.response2">
+            </div>
+            <hr>
+            <div class="test">
+              <h3>Second pair</h3>
+              <table>
                 <tr>
-                  <td class="first-col">Noise</td>
-                  <td>
-                    <input type="radio" value="1" name="test2.noise" required />
-                  </td>
-                  <td><input type="radio" value="2" name="test2.noise" /></td>
-                  <td><input type="radio" value="3" name="test2.noise" /></td>
-                  <td><input type="radio" value="4" name="test2.noise" /></td>
-                  <td><input type="radio" value="5" name="test2.noise" /></td>
+                  <th>
+                    <h4>File 3</h4>
+                    <audio controls>
+                      <source src="subjective_test\double_anon_speed_tempo_cross_cyclegan\2078-142845-0025.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 4</h4>
+                    <audio controls>
+                      <source src="subjective_test\double_anon_speed_tempo_cross_cyclegan\2078-142845-0025_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
                 </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 3</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex3.f3.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex3.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex3.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex3.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex3.f3.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex3.f3.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex3.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex3.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex3.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex3.f3.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 4</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex3.f4.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex3.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex3.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex3.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex3.f4.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex3.f4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex3.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex3.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex3.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex3.f4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex3.f3-4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex3.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex3.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex3.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex3.f3-4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
               </div>
-              <div class="test2.response3">
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="Experiment">
+            <p><h2>Experiment 4<span class="required">*</span></h2></p>
+            <hr>
+            <div class="test">
+              <h3>First pair </h3>
+              <table>
                 <tr>
-                  <td class="first-col">Distortion</td>
-                  <td>
-                    <input
-                      type="radio"
-                      value="1"
-                      name="test2.distortion"
-                      required
-                    />
-                  </td>
-                  <td>
-                    <input type="radio" value="2" name="test2.distortion" />
-                  </td>
-                  <td>
-                    <input type="radio" value="3" name="test2.distortion" />
-                  </td>
-                  <td>
-                    <input type="radio" value="4" name="test2.distortion" />
-                  </td>
-                  <td>
-                    <input type="radio" value="5" name="test2.distortion" />
-                  </td>
+                  <th>
+                    <h4>File 1</h4>
+                    <audio controls>
+                      <source src="subjective_test\pitch_-300\84-121123-0001.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 2</h4>
+                    <audio controls>
+                      <source src="subjective_test\pitch_-300\84-121123-0001_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
                 </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 1</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex4.f1.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex4.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex4.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex4.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex4.f1.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex4.f1.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex4.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex4.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex4.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex4.f1.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 2</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex4.f2.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex4.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex4.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex4.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex4.f2.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex4.f2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex4.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex4.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex4.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex4.f2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex4.f1-2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex4.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex4.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex4.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex4.f1-2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
               </div>
-            </table>
+            </div>
+            <hr>
+            <div class="test">
+              <h3>Second pair</h3>
+              <table>
+                <tr>
+                  <th>
+                    <h4>File 3</h4>
+                    <audio controls>
+                      <source src="subjective_test\pitch_-300\251-118436-0008.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 4</h4>
+                    <audio controls>
+                      <source src="subjective_test\pitch_-300\251-118436-0008_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 3</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex4.f3.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex4.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex4.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex4.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex4.f3.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex4.f3.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex4.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex4.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex4.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex4.f3.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 4</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex4.f4.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex4.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex4.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex4.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex4.f4.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex4.f4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex4.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex4.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex4.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex4.f4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex4.f3-4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex4.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex4.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex4.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex4.f3-4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="Experiment">
+            <p><h2>Experiment 1<span class="required">*</span></h2></p>
+            <hr>
+            <div class="test">
+              <h3>First pair </h3>
+              <table>
+                <tr>
+                  <th>
+                    <h4>File 1</h4>
+                    <audio controls>
+                      <source src="subjective_test\speed_0_8\84-121123-0001.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 2</h4>
+                    <audio controls>
+                      <source src="subjective_test\speed_0_8\84-121123-0001_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 1</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex5.f1.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex5.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex5.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex5.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex5.f1.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex5.f1.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex5.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex5.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex5.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex5.f1.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 2</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex5.f2.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex5.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex5.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex5.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex5.f2.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex5.f2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex5.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex5.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex5.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex5.f2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex5.f1-2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex5.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex5.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex5.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex5.f1-2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+              </div>
+            </div>
+            <hr>
+            <div class="test">
+              <h3>Second pair</h3>
+              <table>
+                <tr>
+                  <th>
+                    <h4>File 3</h4>
+                    <audio controls>
+                      <source src="subjective_test\speed_0_8\174-84280-0008.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 4</h4>
+                    <audio controls>
+                      <source src="subjective_test\speed_0_8\174-84280-0008_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 3</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex5.f3.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex5.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex5.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex5.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex5.f3.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex5.f3.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex5.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex5.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex5.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex5.f3.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 4</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex5.f4.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex5.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex5.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex5.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex5.f4.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex5.f4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex5.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex5.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex5.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex5.f4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex5.f3-4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex5.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex5.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex5.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex5.f3-4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="Experiment">
+            <p><h2>Experiment 6<span class="required">*</span></h2></p>
+            <hr>
+            <div class="test">
+              <h3>First pair </h3>
+              <table>
+                <tr>
+                  <th>
+                    <h4>File 1</h4>
+                    <audio controls>
+                      <source src="subjective_test\speed_tempo_cross\84-121123-0001.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 2</h4>
+                    <audio controls>
+                      <source src="subjective_test\speed_tempo_cross\84-121123-0001_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 1</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex6.f1.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex6.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex6.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex6.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex6.f1.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex6.f1.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex6.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex6.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex6.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex6.f1.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 2</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex6.f2.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex6.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex6.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex6.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex6.f2.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex6.f2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex6.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex6.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex6.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex6.f2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex6.f1-2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex6.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex6.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex6.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex6.f1-2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+              </div>
+            </div>
+            <hr>
+            <div class="test">
+              <h3>Second pair</h3>
+              <table>
+                <tr>
+                  <th>
+                    <h4>File 3</h4>
+                    <audio controls>
+                      <source src="subjective_test\speed_tempo_cross\251-136532-0012.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 4</h4>
+                    <audio controls>
+                      <source src="subjective_test\speed_tempo_cross\251-136532-0012_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 3</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex6.f3.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex6.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex6.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex6.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex6.f3.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex6.f3.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex6.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex6.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex6.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex6.f3.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 4</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex6.f4.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex6.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex6.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex6.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex6.f4.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex6.f4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex6.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex6.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex6.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex6.f4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex6.f3-4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex6.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex6.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex6.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex6.f3-4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="Experiment">
+            <p><h2>Experiment 7<span class="required">*</span></h2></p>
+            <hr>
+            <div class="test">
+              <h3>First pair </h3>
+              <table>
+                <tr>
+                  <th>
+                    <h4>File 1</h4>
+                    <audio controls>
+                      <source src="subjective_test\tempo_0_8\84-121123-0001.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 2</h4>
+                    <audio controls>
+                      <source src="subjective_test\tempo_0_8\84-121123-0001_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 1</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex7.f1.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex7.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex7.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex7.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex7.f1.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex7.f1.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex7.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex7.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex7.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex7.f1.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 2</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex7.f2.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex7.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex7.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex7.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex7.f2.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex7.f2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex7.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex7.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex7.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex7.f2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex7.f1-2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex7.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex7.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex7.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex7.f1-2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+              </div>
+            </div>
+            <hr>
+            <div class="test">
+              <h3>Second pair</h3>
+              <table>
+                <tr>
+                  <th>
+                    <h4>File 3</h4>
+                    <audio controls>
+                      <source src="subjective_test\tempo_0_8\251-118436-0014.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 4</h4>
+                    <audio controls>
+                      <source src="subjective_test\tempo_0_8\251-118436-0014_converted.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 3</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex7.f3.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex7.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex7.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex7.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex7.f3.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex7.f3.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex7.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex7.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex7.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex7.f3.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 4</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex7.f4.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex7.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex7.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex7.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex7.f4.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex7.f4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex7.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex7.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex7.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex7.f4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex7.f3-4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex7.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex7.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex7.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex7.f3-4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="Experiment">
+            <p><h2>Experiment 8<span class="required">*</span></h2></p>
+            <hr>
+            <div class="test">
+              <h3>First pair </h3>
+              <table>
+                <tr>
+                  <th>
+                    <h4>File 1</h4>
+                    <audio controls>
+                      <source src="subjective_test\x_vector\84-121550-0000.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 2</h4>
+                    <audio controls>
+                      <source src="subjective_test\x_vector\84-121550-0000_x_vector.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 1</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex8.f1.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex8.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex8.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex8.f1.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex8.f1.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex8.f1.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex8.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex8.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex8.f1.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex8.f1.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 2</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex8.f2.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex8.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex8.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex8.f2.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex8.f2.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex8.f2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex8.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex8.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex8.f2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex8.f2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex8.f1-2.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex8.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex8.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex8.f1-2.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex8.f1-2.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+              </div>
+            </div>
+            <hr>
+            <div class="test">
+              <h3>Second pair</h3>
+              <table>
+                <tr>
+                  <th>
+                    <h4>File 3</h4>
+                    <audio controls>
+                      <source src="subjective_test\x_vector\174-50561-0000.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                  <th>
+                    <h4>File 4</h4>
+                    <audio controls>
+                      <source src="subjective_test\x_vector\174-50561-0000_x_vector.wav" />
+                      Your browser does not support audio.
+                    </audio>
+                  </th>
+                </tr>
+              </table>
+              <div class="responses">
+                <table>
+                  <tr>
+                    <th class="first-col"></th>
+                    <th class="second-col"></th>
+                    <th>Very Good</th>
+                    <th>Good</th>
+                    <th>Fair</th>
+                    <th>Poor</th>
+                    <th>Very Poor</th>
+                  </tr>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 3</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex8.f3.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex8.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex8.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex8.f3.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex8.f3.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex8.f3.Inte"
+                            required
+                            />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex8.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex8.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex8.f3.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex8.f3.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                  <div class="pair">
+                    <div class="response">
+                      <tr>
+                        <td class="first-col">File 4</td>
+                        <td class="second-col">Naturlness</td>
+                        <td>
+                          <input
+                            type="radio"
+                            value="1"
+                            name="Ex8.f4.naturlness"
+                            required
+                          />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex8.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex8.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex8.f4.naturlness" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex8.f4.naturlness" />
+                        </td>
+                      </tr>
+                      <tr class="response">
+                        <td class="first-col"></td>
+                        <td class="second-col">Intelligibility</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex8.f4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex8.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex8.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex8.f4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex8.f4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+                <table>
+                  <div class="spk-dis">
+                    <tr>
+                      <th class="first-col"></th>
+                      <th class="second-col"></th>
+                      <th>5</th>
+                      <th>4</th>
+                      <th>3</th>
+                      <th>2</th>
+                      <th>1</th>
+                    </tr>
+                    <div class="response">
+                      <tr class="response">
+                        <td class="first-col" style="text-align: left;" colspan="2">Speaker Dissimilarity</td>
+                        <td>
+                          <input
+                          type="radio"
+                          value="1"
+                          name="Ex8.f3-4.Inte" required />
+                        </td>
+                        <td>
+                          <input type="radio" value="2" name="Ex8.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="3" name="Ex8.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="4" name="Ex8.f3-4.Inte" />
+                        </td>
+                        <td>
+                          <input type="radio" value="5" name="Ex8.f3-4.Inte" />
+                        </td>
+                      </tr>
+                    </div>
+                  </div>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
         <div class="btn-block">
